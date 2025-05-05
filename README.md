@@ -2,6 +2,7 @@
 
 ## Overview
 This project explores clinical trial data from the GSK x DigData Step Up Challenge using R. It involves cleaning, merging, and analysing patient data to assess treatment response patterns across two groups: a new drug (Miraculon-B) and the standard of care (Control).
+
 ---
 
 ## Objective
@@ -17,7 +18,7 @@ To  evaluate the effectiveness of the new drug compared to standard care by anal
 ---
 
 ## Key Findings
-- **Response Rate**: Drug group had a significantly higher response rate (54.8%) than the Control group (32.2%).
+- **Response Rate**: The Drug group had a significantly higher response rate (54.8%) than the Control group (32.2%).
 - **Protein Levels**: Responders had consistently lower protein concentration levels, suggesting potential as a biomarker for treatment effectiveness.
 - **Age & BMI**: No substantial influence of age or BMI on treatment response.
 
@@ -35,7 +36,7 @@ Insights from this analysis can support clinical decision-making by identifying 
 ---
 
 ## Files in this Repository
-- `merged_data.csv`: Preprocessed dataset used for analysis
+- `merged_data.csv`: Processed dataset used for analysis
 - `gsk_Clinical_Trial.R`: R script containing data cleaning, transformation, visualisation, and statistical summaries
 - `GSK_clinical_trial_presentation.pdf`: Summary slides submitted to GSK x DigData
 
@@ -48,4 +49,4 @@ This project was developed as part of the GSK x DigData Step Up career challenge
 
 ## Author
 **Damilola Ogungbemi**  
-Aspiring Data Scientist
+MSc Biotechnology | Aspiring Data Scientist 
