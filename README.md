@@ -1,7 +1,7 @@
 # GSK Clinical Trial Response Analysis
 
 ## Overview
-This project explores clinical trial data from the GSK x DigData Step Up Challenge using R. It involves cleaning, merging, and analysing patient data to assess treatment response patterns across two groups: a new drug (Miraculon-B) and the standard of care (Control).
+This project explores clinical trial data from the GSK x DigData Step Up Challenge using R. It involves cleaning, merging, analysing and visualising patient data to assess treatment response patterns across two groups: a new drug (Miraculon-B) and the standard of care (Control).
 
 ---
 
