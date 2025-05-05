@@ -38,7 +38,7 @@ Insights from this analysis can support clinical decision-making by identifying 
 ## Files in this Repository
 - `merged_data.csv`: Processed dataset used for analysis
 - `GSK_AnalysisScript.R`: R script containing data cleaning, transformation, visualisation, and statistical summaries
-- `GSK_clinical_trial_presentation.pdf`: Summary slides submitted to GSK x DigData
+- `GSK X DigData-Damilola Ogungbemi.pptx`: Summary slides submitted to GSK x DigData
 
 ---
 
