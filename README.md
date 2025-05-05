@@ -1,20 +1,17 @@
-# Clinical_Trial_Response_Analysis-GSK
-Data-driven analysis of clinical trial responses using R, focused on identifying treatment effectiveness patterns from the GSK x DigData challenge.
-# Clinical Trial Response Analysis using R – GSK x DigData
+# Clinical Trial Response Analysis – GSK x DigData
 
 ## Overview
-This project explores clinical trial data from the GSK x DigData career challenge. The aim was to investigate treatment response patterns among patients using statistical techniques in R, focusing on demographic and clinical indicators like age, BMI, and protein concentration.
-
+This project explores clinical trial data from the GSK x DigData Step Up Challenge using R. It involves cleaning, merging, and analysing patient data to assess treatment response patterns across two groups: a new drug (Miraculon-B) and the standard of care (Control).
 ---
 
 ## Objective
-To identify factors associated with positive treatment response in a clinical trial by analyzing variables such as age, BMI, and protein concentration, and comparing trends across treatment groups (Control vs Drug).
+To  evaluate the effectiveness of the new drug compared to standard care by analysing variables such as age, BMI, and protein concentration, and comparing trends across treatment groups (Control vs. Drug).
 
 ---
 
 ## Tools Used
 - **Language**: R
-- **Libraries**: `tidyverse`, `dplyr`, `ggplot2`, `readr`
+- **Libraries**: `tidyverse`, `dplyr`, `ggplot2`, `readr`, `gt`
 - **Data Format**: CSV files
 
 ---
@@ -38,8 +35,8 @@ Insights from this analysis can support clinical decision-making by identifying 
 ---
 
 ## Files in this Repository
-- `cleaned_clinical_data.csv`: Preprocessed dataset used for analysis
-- `gsk_analysis.R`: R script containing data cleaning, transformation, visualization, and statistical summaries
+- `merged_data.csv`: Preprocessed dataset used for analysis
+- `gsk_Clinical_Trial.R`: R script containing data cleaning, transformation, visualisation, and statistical summaries
 - `GSK_clinical_trial_presentation.pdf`: Summary slides submitted to GSK x DigData
 
 ---
@@ -51,4 +48,4 @@ This project was developed as part of the GSK x DigData Step Up career challenge
 
 ## Author
 **Damilola Ogungbemi**  
-Postgraduate Researcher, University of Greenwich
+Aspiring Data Scientist
