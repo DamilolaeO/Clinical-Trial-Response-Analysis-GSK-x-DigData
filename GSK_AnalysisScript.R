@@ -1,7 +1,12 @@
-# Load Required Libraries
+# Load and Install Required Libraries and packages
 library(tidyverse)
 library(ggplot2)
 library(gt)
+
+install.packages(c("caret", "rpart", "rpart.plot"))
+library(caret)
+library(rpart)
+library(rpart.plot)
 
 # Inspect the First Few Rows of Each Dataset
 head(clinical_study)
@@ -20,16 +25,16 @@ clinical_study <- filter(clinical_study, age >= 18)
 ## Remove Duplicate Rows
 clinical_study <- distinct(clinical_study)
 
-## Replace NA in Weight with Mean
+## Replace NA with Mean Value
 clinical_study$weight <- as.numeric(clinical_study$weight)
 clinical_study$weight[is.na(clinical_study$weight)] <- mean(clinical_study$weight, na.rm = TRUE)
 
-## Convert and Clean Protein Concentration
+## Replace NA with mean value
 protein_levels$protein_concentration <- as.numeric(protein_levels$protein_concentration)
 protein_levels$protein_concentration[is.na(protein_levels$protein_concentration)] <- 
   mean(protein_levels$protein_concentration, na.rm = TRUE)
 
-## Feature Engineering: Calculate BMI
+## Calculate BMI
 clinical_study <- clinical_study %>%
   mutate(BMI = weight / height^2)
 
@@ -41,6 +46,7 @@ merged_data <- left_join(
 )
 
 head(merged_data, n=20)
+
 
 
 # Exploratory Summary Statistics
@@ -77,7 +83,7 @@ merged_data %>%
   summarise(mean_protein_concentration = mean(protein_concentration, na.rm = TRUE))
 
 
-# Visualizations
+# Visualisations
 
 
 ## Boxplot: Age by Response
@@ -143,9 +149,51 @@ summary_table %>%
     `Response Rate (%)` = "Response Rate (%)"
   )
 
-
-# Save Final Dataset
+# Save Final_clean Dataset
 write.csv(merged_data, "merged_data.csv", row.names = FALSE)
+
+
+#Data Modelling
+
+
+
+# Prepare the data
+# Select only relevant features (exclude participant_id and other identifiers)
+model_data <- merged_data %>%
+  select(RESPONSE, age, BMI, protein_concentration, trt_grp) %>%
+  mutate(RESPONSE = as.factor(RESPONSE),
+         trt_grp = as.factor(trt_grp))  
+
+# Split into training and test sets (80% train, 20% test)
+set.seed(123)  
+train_index <- createDataPartition(model_data$RESPONSE, p = 0.8, list = FALSE)
+train_data <- model_data[train_index, ]
+test_data <- model_data[-train_index, ]
+
+# Train a decision tree model
+tree_model <- rpart(RESPONSE ~ ., data = train_data, method = "class")
+
+# Plot the decision tree
+rpart.plot(tree_model, type = 3, extra = 104, fallen.leaves = TRUE)
+
+# Predict on the test set
+predictions <- predict(tree_model, newdata = test_data, type = "class")
+
+# Evaluate the model
+confusionMatrix(predictions, test_data$RESPONSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
