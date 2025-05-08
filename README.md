@@ -68,7 +68,8 @@ This analysis contributes to regulatory reporting and clinical decision-making b
 ---
 
 ## Files in this Repository  
-- `merged_data.csv`: Cleaned and processed dataset  
+- `Clinical_Trial_Decision_Tree.pdf`: Visualisation of the decision tree model 
+-  `merged_data.csv`: Cleaned and processed dataset  
 - `GSK_AnalysisScript.R`: Full R script (cleaning, EDA, modelling, visualisation)  
 - `GSK X DigData-Damilola Ogungbemi.pptx`: Summary slides submitted for the challenge  
 - `README.md`: Project documentation  
