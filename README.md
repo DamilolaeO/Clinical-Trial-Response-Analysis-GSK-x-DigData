@@ -83,5 +83,4 @@ This project was developed as part of the GSK x DigData Step Up career challenge
 
 ## Author
 **Damilola Ogungbemi**  
-MSc Biotechnology | Data Scientist 
-*Passionate about using data for public good in healthcare and policy.*
+MSc Biotechnology | Data Scientist | *Passionate about using data for public good in healthcare and policy.*
