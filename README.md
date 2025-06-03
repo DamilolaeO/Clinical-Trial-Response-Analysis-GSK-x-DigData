@@ -16,7 +16,7 @@ To determine whether Miraculon-B improves treatment response compared to standar
 - **Data Format**: CSV files
 
 ---
-## 📊 Data Workflow  
+## Data Workflow  
 ### 1. Data Preparation  
 - Imported and merged multiple CSV datasets  
 - Replaced missing values using mean imputation  
